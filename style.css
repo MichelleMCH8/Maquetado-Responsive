@@ -1,0 +1,272 @@
+html {
+	height: 100%
+}
+
+body {
+	background-color: #999999;
+	min-height: 100%;
+}
+
+.grid-container {
+	display: grid;
+	/*grid-template-rows: 10% 25% 65% 20%;
+	grid-template-columns: 70% 30%; 
+	grid-template-areas: 
+	  "nav-are nav-are"
+	  "header-area header-area"
+	  "section-area aside-area "
+	  "footer-area footer-area";*/
+
+    grid-template:
+       "nav-are       nav-are" 6rem 
+       "header-area   header-area" 13rem 
+       "section-area  aside-area" auto
+       "footer-area   footer-area" 10rem/ 
+       70%            30%
+    ;
+}
+
+section h1 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	color: #00bfff; 
+
+}
+nav h3 {
+	color: 	#00ff00;
+	text-align: center;
+}
+
+li {
+	border-width: 1px;
+	margin: 0px 20px;
+	float: right;
+	text-align: center;
+	display: inline-block;
+	font-family: Copperplate, Papyrus, fantasy;
+	
+
+}
+
+footer h4{
+	color: 	#ff0080;
+
+}
+
+.grid-gallery{
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: auto auto;
+}
+
+.grid-section{
+     display: grid;
+     grid-template-columns: auto auto;
+     grid-template-rows: auto auto;
+}
+
+nav {
+	background-color: #00b33c;
+	grid-area: nav-are;
+	font-family: Copperplate, Papyrus, fantasy;
+}
+
+header {
+	background-color: crimson;
+	grid-area: header-area;
+	font-family: Copperplate, Papyrus, fantasy;
+}
+
+img {
+    width: 100px;
+    height: 150px;    
+
+}
+
+section {
+	background-color: #0000ff;
+	grid-area: section-area;
+	font-family: Copperplate, Papyrus, fantasy;
+}
+
+aside {
+	background-color: #1ac6ff;
+	grid-area: aside-area;
+	font-family: Copperplate, Papyrus, fantasy;
+  	
+}
+
+footer {
+	background-color: palevioletred;
+	grid-area: footer-area;
+}
+
+.responive {
+	width: 150px;
+	height: 100px;
+	}
+
+.la-mona{
+   grid-column-start: auto;
+   grid-column-end: auto;
+}
+
+.img2{
+	grid-column-start: 2; 
+	grid-column-end: 4;
+}
+
+.img1{
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start: 4;
+	grid-column-end: 5;
+}
+
+.Logo{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	
+}
+
+.img3{
+    	grid-column-start: 5;
+    	grid-column-end:  5;
+    }	
+ /**************************************
+ cambios de configuración para tablet
+ ***************************************/
+ 
+ @media (max-width: 768px) {
+
+   .grid-container {
+   	  
+   	  grid-template:
+   	    "nav-are       nav-are" 10rem 
+        "header-area   section-area" 105rem 
+        "header-area   aside-area" 15rem
+        "footer-area   footer-area" 10rem/ 
+        50%            80%
+      ;
+   }
+
+    .grid-gallery {
+    	grid-template-columns: auto;
+    	grid-template-rows: repeat(5, 3rem);
+    	justify-content: center;
+    }
+     
+     .la-mona{
+     	grid-column-start: 1;
+     	grid-column-end: 2;
+        object-fit: cover;
+        width: 70px;
+	    height: 50px;
+
+     }
+
+    .img2{
+	    grid-column-start: 2; 
+	    grid-column-end: 3;
+	    width: 10rem;
+	    height: 100%;
+	    object-fit: cover;
+    }
+
+    .img1{
+	    grid-row-start: 1;
+	    grid-row-end: 3;
+	    grid-column-start: 3;
+	    grid-column-end: 5;
+	    width: 150px;
+	    height: 100%;
+	    object-fit: cover;
+    }
+
+    .Logo{
+	    grid-column-start:4;
+	    grid-column-end:5;
+	    width: 150px;
+	    height: 100%;
+	    object-fit: cover;
+    }
+
+    .img3{
+    	grid-column-start: 5;
+    	grid-column-end:  5;
+    	width: 150px;
+	    height: 100%;
+	    object-fit: cover;
+    } 
+
+}
+
+ /**************************************
+ cambios de configuración para teléfono
+ ***************************************/
+
+ @media (max-width: 425px) {
+	nav {
+		opacity: 20%;
+
+	}
+    
+    .grid-container{
+
+	  grid-template: 
+        "nav-are      nav-are" 15rem 
+        "aside-area   aside-area" 20rem 
+        "header-area  section-area" auto
+        "footer-area  footer-area" 10rem/ 
+        50%            80%
+      ;
+    } 
+
+    .grid-galley {
+    	grid-template-columns: auto;
+    	grid-template-rows: repeat(5, 3rem);
+    }
+     
+     .la-mona{
+     	grid-column-start: 1;
+     	grid-column-end: 2;
+     	width: 100rem;
+	    height: 100%;
+
+     }
+     
+    
+    .img2{
+	    grid-column-start: 2; 
+	    grid-column-end: 3;
+	    width: 10rem;
+	    height: 100%;
+	    object-fit: cover;
+    }
+
+    .img1{
+	    grid-row-start: 1;
+	    grid-row-end: 3;
+	    grid-column-start: 3;
+	    grid-column-end: 5;
+	    width: 150px;
+	    height: 100%;
+	    object-fit: cover;
+    }
+
+     .Logo{
+	    grid-column-start:4;
+	    grid-column-end:5;
+	    width: 150px;
+	    height: 100%;
+	    object-fit: cover;
+    } 
+
+   .img3{
+    	grid-column-start: 5;
+    	grid-column-end:  5;
+    	width: 150px;
+	    height: 100%;
+	    object-fit: cover;
+    } 
+
